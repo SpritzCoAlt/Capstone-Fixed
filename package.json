@@ -1,0 +1,23 @@
+{
+  "name": "capstone-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "dev:css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:css\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3",
+    "nodemon": "^3.1.14"
+  },
+  "allowScripts": {
+    "tailwindcss@4.3.3": true,
+    "@tailwindcss/cli@4.3.3": true
+  }
+}
