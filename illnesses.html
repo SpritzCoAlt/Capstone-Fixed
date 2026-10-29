@@ -10,28 +10,51 @@
 </head>
 
 <nav class="text-white shadow-md">
-  <div class="max-w-7xl mx-auto px-1.5 sm:px-1.5 lg:px-1.5">
+  <div class="max-w-7xl mx-auto px-1 sm:px-1 lg:px-1">
     <div class="flex items-center justify-between h-14">
       
      
-      <div class="shrink-0 flex items-center gap-0 font-sans text-2xl tracking-normal text-white">
+      <div class="shrink-0 flex items-center">
         <a href="/">
-          <img class="fit-picture" src="./assets/mhmresearch.org.svg" alt="MHM Research" />
+          <img class="h-8 w-auto" src="./assets/mhmresearch.org.svg" alt="MHM Research" />
         </a>
       </div>
 
-      
-      <div class="flex items-center space-x-10">
-        
-        <div class="hidden md:flex items-center space-x-2 text-lg font-sans">
-          <a href="/" class="text-white hover:text-white transition-colors">Home</a>
-          <a href="./research.html" class="text-white hover:text-white transition-colors">Research</a>
-          <a href="./illnesses.html" class="text-white hover:text-white transition-colors">Illnesses</a>
-        </div>
+     
+      <div class="hidden md:flex items-center space-x-6 text-base font-sans">
+        <a href="/" class="text-white hover:text-gray-300 transition-colors">Home</a>
+        <a href="./research.html" class="text-white hover:text-gray-300 transition-colors">Research</a>
+        <a href="./illnesses.html" class="text-white hover:text-gray-300 transition-colors">Illnesses</a>
       </div>
+
+      <div class="flex md:hidden">
+        <button id="mobile-menu-btn" type="button" class="p-2 text-white hover:text-gray-300 focus:outline-none" aria-label="View Menu">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
     </div>
   </div>
+
+  
+  <div id="mobile-menu" class="hidden md:hidden px-5 pt-2 pb-4 space-y-2">
+    <a href="/" class="block py-2 text-base text-white hover:text-gray-300 font-semibold">Home</a>
+    <a href="./research.html" class="block py-2 text-base text-white hover:text-gray-300 font-semibold" >Research</a>
+    <a href="./illnesses.html" class="block py-2 text-base text-white hover:text-gray-300 font-semibold" >Illnesses</a>
+  </div>
 </nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
 <div class="my-1.5"></div>
 <body class="bg-stone-900">
     <div class="my-5"></div>
